@@ -1,0 +1,6 @@
+Hello.
+Here we are going to learn GitHub commands.
+
+- 1st open a terminal and then 'git init' initialize git.
+
+what you are now seeing in the VS Code is 'Working Directory'
