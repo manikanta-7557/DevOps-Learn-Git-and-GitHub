@@ -6,7 +6,7 @@
 
 4. git commit -m "message" --> This cmd is used to commit the staged files to the local repository with a message.
 
-5. git commit -a -m "message" --> This cmd is used to commit the files directly to the local repository with a message (without staging*).
+5. **git commit -a -m "message"** --> This cmd is used to commit the files directly to the local repository with a message (without staging*).
 
 6. git log --> This cmd is used to display the commit history of the repository (shows commit ID, author, date, and message).
     --> git log --oneline --> Displays the commit history in a compact single-line format (short commit ID + message).
@@ -21,3 +21,6 @@
     --> git diff --staged --> Shows the differences between the **staging area** and the **last commit** (staged changes).
     --> git diff <branch1> <branch2> --> Shows the differences between two branches.
     --> git diff <commitID1> <commitID2> --> Shows the differences between two commits.
+10. **git rm --cached <file name>** --> To remove a file from the remote **GIT Repo** which is already commited.
+11. **git restore --staged <file name>** --> To unstage the file from the staging area.
+12.
