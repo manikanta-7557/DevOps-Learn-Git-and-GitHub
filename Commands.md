@@ -10,3 +10,14 @@
 
 6. git log --> This cmd is used to display the commit history of the repository (shows commit ID, author, date, and message).
     --> git log --oneline --> Displays the commit history in a compact single-line format (short commit ID + message).
+7. git remote -v --> This cmd is used to check the remote repository status (shows the remote name and its fetch/push URLs).
+8. **rm -rf <folder name>**
+    - 'r' stands for **recursively** deletes all files and subdirectories inside a folder.
+    - 'f' stands for **force** delete without asking for confirmation.
+    Ex : rmdir /s /q <folder name>
+
+9. **git diff** - Shows difference
+    git diff --> This cmd is used to show the differences between the **working directory** and the **staging area** (unstaged changes).
+    --> git diff --staged --> Shows the differences between the **staging area** and the **last commit** (staged changes).
+    --> git diff <branch1> <branch2> --> Shows the differences between two branches.
+    --> git diff <commitID1> <commitID2> --> Shows the differences between two commits.
