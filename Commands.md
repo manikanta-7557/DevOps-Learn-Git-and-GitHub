@@ -38,3 +38,36 @@
 
 18. **git clone <repo URL>** --> This cmd is used to clone the remote repository to the local system.
 
+19. git push -u origin main --> This cmd is used to push the local commits to the remote repository for the first time.
+    --> '-u' (***--set-upstream***) --> Links the local branch to the remote branch, so next time you can just use 'git push' without specifying origin main.
+
+20. git push --> This cmd is used to push the local commits to the remote repository (***after the upstream is set with -u***).
+
+21. git pull -u origin main --> This cmd is used to fetch and merge the remote repository changes to the local repository for the first time.
+    --> '-u' (--set-upstream) --> Links the local branch to the remote branch, so next time you can just use 'git pull' without specifying origin main.
+    --> **git pull origin main --rebase** --> This cmd is used to fetch the remote changes and replay the local commits on top of them instead of merging.
+    --> '--rebase' --> Avoids creating an extra merge commit and keeps the commit history clean and linear.
+
+    What is Rebase?
+    Normally git pull does a merge which creates an extra merge commit, making history look messy.
+    --rebase instead replays your local commits on top of the remote commits — keeping the history clean and linear.
+
+    Visual difference:
+
+    Without --rebase (merge):
+    A --- B --- C (remote)
+              \
+               M (merge commit)
+              /
+    D --- E (your local commits)
+
+    With --rebase:
+    A --- B --- C --- D' --- E' (clean linear history)
+
+
+
+22. git pull --> This cmd is used to fetch and merge the remote repository changes to the local repository (after the upstream is set with -u).
+
+23. git remote -v --> This cmd is used to check the remote repository status.
+    --> **'-v'** (--verbose) --> Shows extra details like the remote name along with its fetch and push URLs.
+
