@@ -71,3 +71,25 @@
 23. git remote -v --> This cmd is used to check the remote repository status.
     --> **'-v'** (--verbose) --> Shows extra details like the remote name along with its fetch and push URLs.
 
+24. git stash --> This cmd is used to temporarily save the uncommitted changes and reset the working directory to a clean state.
+
+25. git stash list --> This cmd is used to view all the stashed changes stored in the stash drawer.
+    --> Output: stash@{0}: WIP on feature-branch: 41d3038 Initial Setup
+
+26. git stash pop --> This cmd is used to restore the most recent stashed changes back to the working directory and deletes it from the stash list.
+
+27. git stash apply --> This cmd is used to restore the most recent stashed changes back to the working directory but keeps a backup copy in the stash list.
+    --> Difference between pop and apply:
+        --> git stash pop   --> Restores + Deletes from stash list (most common).
+        --> git stash apply --> Restores + Keeps a copy in stash list (useful to apply on different branches).
+
+28. git stash drop --> This cmd is used to delete a specific stash from the stash list.
+29. git stash clear --> This cmd is used to delete all the stashes from the stash list.
+
+------------------------------------------------------------------------------------------
+GitHub Tags
+------------------------------------------------------------------------------------------
+There are two types of Tags :
+- Lightweight Tags : This type of tags just mention the **version details**.
+- Annonated Tags : This type of tags give additional information like -> Tag Name, Creator Name, Date, Message.
+
