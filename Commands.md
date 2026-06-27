@@ -88,8 +88,57 @@
 
 ------------------------------------------------------------------------------------------
 GitHub Tags
+- In Git, Tags are references that point to specific points in your history
 ------------------------------------------------------------------------------------------
 There are two types of Tags :
 - Lightweight Tags : This type of tags just mention the **version details**.
-- Annonated Tags : This type of tags give additional information like -> Tag Name, Creator Name, Date, Message.
+- Annotated Tags : This type of tags give additional information like -> Tag Name, Creator Name, Date, Message.
 
+**Commands Used** :
+30. **git tag** --> This cmd is used to fetch all the tags that were given in the current repo.
+31. **git tag <version_name_/_number>** --> This cmd helps us to give a tag name till a specific commit.
+    --> **git tag -a <version_name_/_number> -m <"any message">** --> Annotated tag
+
+32. git show <version_name_/_number> --> shows the details of the mentioned tag
+33. git push origin <tag_name> --> Pushes the tag from the local repo to the remote repository.
+
+***NOTE : **git push** command ignores tags and only transfers your code commits.*** 
+
+34. git push origin main --tags --> This cmd is used to push all the local tags to the remote repository (including messy/broken/test tags).
+    --> '--tags' --> Blindly pushes every single tag sitting on your local machine to GitHub.
+
+35. git push origin main --follow-tags --> This cmd is used to push ***only*** the ***annotated tags*** that are directly attached to the commits being pushed.
+    --> '--follow-tags' --> Prevents pushing unnecessary/broken tags and keeps the remote repository clean.
+    --> Difference between --tags and --follow-tags:
+        --> --tags        --> Pushes ALL local tags (messy + clean).
+        --> --follow-tags --> Pushes ONLY annotated tags linked to the current commits being pushed.
+
+------------------------------------------------------------------------------------------
+Git Branch
+------------------------------------------------------------------------------------------
+
+36. git branch --> This cmd is used to list all the local branches (current branch is highlighted with *).
+
+37. git branch <branchName> --> This cmd is used to create a new branch.
+
+38. git checkout -b <branchName> --> This cmd is used to create a new branch and switch to it at the same time.
+
+39. git switch -c <branchName> --> This cmd is used to create and switch to a new branch (modern alternative to checkout -b).
+
+40. git switch <branchName> --> This cmd is used to switch to an existing branch (modern alternative to checkout).
+
+41. git checkout <branchName> --> This cmd is used to switch to an existing branch.
+
+42. git branch --all --> This cmd is used to list all branches (both local and remote).
+
+43. git push origin <branchName> --> This cmd is used to push a specific branch to the remote repository.
+
+44. git branch -m <oldName> <newName> --> This cmd is used to rename a branch.
+
+45. git branch -d <branchName> --> This cmd is used to delete a branch (only if it is fully merged).
+    --> git branch -D <branchName> --> Force deletes a branch even if it is not merged.
+
+46. git push origin --delete <branchName> --> This cmd is used to delete a branch from the remote repository.
+
+47. git log --graph --> This cmd is used to display the commit history in a visual graph format showing branches and merges.
+    --> git log --graph --oneline --> Displays the graph in a compact single-line format.
