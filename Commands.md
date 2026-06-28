@@ -126,6 +126,12 @@ Git Branch
 39. git switch -c <branchName> --> This cmd is used to create and switch to a new branch (modern alternative to checkout -b).
 
 40. git switch <branchName> --> This cmd is used to switch to an existing branch (modern alternative to checkout).
+    --> *git switch -* --> The Hyphen makes the branch pointer move to a previous branch. 
+    --> Example :
+            git switch main        # you are now on main
+            git switch feature     # you are now on feature
+            git switch -           # you are back on main
+
 
 41. git checkout <branchName> --> This cmd is used to switch to an existing branch.
 
